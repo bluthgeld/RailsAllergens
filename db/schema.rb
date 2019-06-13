@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_13_165450) do
+ActiveRecord::Schema.define(version: 2019_06_13_205433) do
 
   create_table "allergens", force: :cascade do |t|
     t.integer "user_id"
