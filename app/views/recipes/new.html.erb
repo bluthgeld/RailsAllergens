@@ -1,0 +1,14 @@
+
+
+
+<%= form_for @recipe do |r| %>
+  <h2><%= r.label "Recipe Name" %> <%= r.text_field :name %></h2>
+
+  <h2><%= r.label "User" %> <%= r.collection_select(:user_id, User.all, :id, :name, prompt: true) %></h2>
+
+  <h2>Ingredients</h2>
+
+  <%= r.collection_check_boxes(:ingredient_ids, Ingredient.all, :id, :name) %>
+
+  <p><%= r.submit %></p>
+<% end %>
